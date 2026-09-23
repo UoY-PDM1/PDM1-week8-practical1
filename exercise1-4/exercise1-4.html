@@ -31,7 +31,6 @@ up by the microphone. You can then use this number to move your character's mout
     returns 0, add the following line in <code>setup()</code> before starting the mic:</p>
     <pre>getAudioContext().suspend();</pre>
 <p>Then, call p5.js' <code>userStartAudio()</code> function inside the <code>mouseClicked()</code> function.</p>
-<p>You can see a complete example in the code for <a href="https://github.com/UoY-PDM1/PDM1-example-code/blob/main/Lectures/W8L1/audioIn/sketch.js" target="_blank">Week 8 Lecture 1 (audioIn)</a>.</p>
 <p>Example output:</p>
             <p>
                 <video width="300" controls>
@@ -56,7 +55,7 @@ up by the microphone. You can then use this number to move your character's mout
                         maximum of 100 pixels down the y axis from its normal position.
                     </p>
                     <p>Get the microphone's level (e.g. <code>mic.getLevel()</code>) every frame. The <code>getLevel()</code> method 
-                    will return a float between 0 and 1. You can use it to figure out how much to move your creature's mouth 
+                    will return a number between 0 and 1. You can use it to figure out how much to move your creature's mouth 
                 within the range of movement. For example, when the mic level is 0, the mouth should be in its normal position and when 
             the mic level is 1, the mouth should be as far from its normal position as it can move. To do this, I created a variable to store 
         the mouth's usual position and another variable to store the maximum movement. Then, the mouth's position can be calculated as:<br>
